@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import EmployeeList from './pages/EmployeeList';
 import ProfitLoss from './pages/ProfitLoss';
+import ProfitLossTable from './components/ProfitLossTable';
 import Profile from './pages/Profile';
 
 const App: React.FC = () => {
@@ -25,6 +26,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Dashboard />} />
           <Route path="/employees" element={<EmployeeList />} />
           <Route path="/profit-loss" element={<ProfitLoss />} />
+          <Route path="/profit-loss-table" element={<ProfitLossTable />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

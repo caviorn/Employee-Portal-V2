@@ -43,8 +43,8 @@ const Login: React.FC = () => {
             width: '100%',
           }}
         >
-          <Typography component="h1" variant="h5" color="primary">
-            Employee Portal Login
+          <Typography component="h1" variant="h5" color="primary" sx={{ fontWeight: 700 }}>
+            Amensys Portal Login
           </Typography>
           {error && (
             <Alert severity="error" sx={{ mt: 2, width: '100%' }}>

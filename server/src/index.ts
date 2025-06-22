@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import authRoutes from './routes/auth';
 import employeeRoutes from './routes/employees';
 import profitLossRoutes from './routes/profitLoss';
+import exportRoutes from './routes/export';
 import { authenticateToken } from './middleware/auth';
 
 dotenv.config();
@@ -20,6 +21,7 @@ app.use('/api/auth', authRoutes);
 // Protected routes
 app.use('/api/employees', authenticateToken, employeeRoutes);
 app.use('/api/profit-loss', authenticateToken, profitLossRoutes);
+app.use('/api/export', exportRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
